@@ -19,7 +19,7 @@ WORKDIR /build
 COPY . .
 
 WORKDIR /build/${service}
-RUN go build -o main main.go
+RUN go build -o main cmd/main.go
 
 #
 # Deploy
