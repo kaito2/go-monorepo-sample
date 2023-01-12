@@ -12,13 +12,13 @@ ENV GOOS=linux
 ENV GOARCH=amd64
 WORKDIR /build
 
-COPY app/go.mod ./
-COPY app/go.sum ./
+COPY app1/go.mod ./
+COPY app1/go.sum ./
 RUN go mod download
 
 COPY . .
 
-RUN go build -o main app/main.go
+RUN go build -o main app1/main.go
 
 #
 # Deploy
