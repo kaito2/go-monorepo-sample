@@ -1,4 +1,2 @@
-github.com/kaito2/go-version-check v0.0.1 h1:pwMaQhFZwiKvGMwz4xnDA/y0KqCgNDgu4lfwFkQg3bI=
-github.com/kaito2/go-version-check v0.0.1/go.mod h1:6JMKRy5gNMvg219HxDvhm4Oj8qegHL6k8nFTfB0hz1Y=
-github.com/kaito2/go-workspace-sample/lib v0.0.0-20221201052702-edd0cde95c38 h1:6Tvz0YhB0FONfYzaupKICdKw0Ml7TZZCv45ORXvuerc=
-github.com/kaito2/go-workspace-sample/lib v0.0.0-20221201052702-edd0cde95c38/go.mod h1:NPSEroNh8dePbbR+d33iBQGXL9gnRz+C7jZgQbksfRE=
+github.com/kaito2/go-version-check v0.1.0 h1:wPnHBns/yGLQ+iCzPoRkkZVPTxww5ng1gGQ0s1j/KgE=
+github.com/kaito2/go-version-check v0.1.0/go.mod h1:6JMKRy5gNMvg219HxDvhm4Oj8qegHL6k8nFTfB0hz1Y=

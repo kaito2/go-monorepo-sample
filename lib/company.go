@@ -1,3 +1,3 @@
 package lib
 
-const Name = "kaito2-updated2"
+const Name = "kaito2"
