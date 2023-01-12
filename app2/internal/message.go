@@ -1,3 +1,5 @@
 package internal
 
-const Message = "message from app2/internal"
+func Message() string {
+	return "message from app2/internal"
+}
