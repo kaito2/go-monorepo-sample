@@ -7,18 +7,19 @@
 #
 FROM golang:1.19 as builder
 
+ARG service
+RUN echo 'Build target service: ${service}'
+RUN test -n "$service" || (echo "service  not set" && false)
+
 ENV CGO_ENABLED=0
 ENV GOOS=linux
 ENV GOARCH=amd64
 WORKDIR /build
 
-COPY app1/go.mod ./
-COPY app1/go.sum ./
-RUN go mod download
-
 COPY . .
 
-RUN go build -o main app1/main.go
+WORKDIR /build/${service}
+RUN go build -o main main.go
 
 #
 # Deploy
@@ -26,9 +27,11 @@ RUN go build -o main app1/main.go
 # hadolint ignore=DL3007
 FROM gcr.io/distroless/static-debian11:latest
 
+ARG service
+
 WORKDIR /
 
-COPY --from=builder /build/main /main
+COPY --from=builder /build/${service}/main /main
 
 USER nonroot
 
